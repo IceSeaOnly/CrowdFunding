@@ -132,7 +132,7 @@ export default class ComplexProgressTable extends Component {
           </Button>
           <Button
             style={styles.operationButton}
-            onClick={() => this.editItem(index, record)}
+            onClick={() => this.see(index, record)}
             shape="text"
           >
             查看
@@ -145,14 +145,14 @@ export default class ComplexProgressTable extends Component {
         <div style={styles.operations}>
           <Button
             style={styles.operationButton}
-            onClick={() => this.editItem(index, record)}
+            onClick={() => this.refund(index, record)}
             shape="text"
           >
             退款
           </Button>
           <Button
             style={styles.operationButton}
-            onClick={() => this.editItem(index, record)}
+            onClick={() => this.see(index, record)}
             shape="text"
           >
             查看
@@ -160,6 +160,14 @@ export default class ComplexProgressTable extends Component {
         </div>
       );
   };
+
+  see = (index,record)=>{
+    Toast.success('请复制唯一哈希到搜索页查看');
+  }
+
+  refund = (index,record)=>{
+    Toast.success('页面制作中，晚点再来吧!');
+  }
 
   participate = (index,record)=>{
     var val = window.prompt("输入参与NAS额度", 10);
@@ -185,7 +193,8 @@ export default class ComplexProgressTable extends Component {
   renderProgress = (value,record,other) => {
     var nowHas = parseInt(other.nowHas);
     var expect = parseInt(other.expect);
-    return <Progress percent={other.success == 1?100:(nowHas==0?0:nowHas/expect*100)} />;
+    var percent = (other.success == 1?100:(nowHas==0?0:nowHas/expect*100)).toFixed(2);
+    return <Progress percent={percent} />;
   };
 
   renderStates = (a,b,c)=>{

@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Activities from './pages/Activities';
 import HeaderAsideFooterResponsiveLayout from './layouts/HeaderAsideFooterResponsiveLayout';
 import Launch from './pages/Launch';
+import See from './pages/See';
 import NotFound from './pages/NotFound';
 
 const routerConfig = [
@@ -19,6 +20,11 @@ const routerConfig = [
     path: '/launch',
     layout: HeaderAsideFooterResponsiveLayout,
     component: Launch,
+  },
+  {
+    path: '/see',
+    layout: HeaderAsideFooterResponsiveLayout,
+    component: See,
   },
   {
     path: '*',

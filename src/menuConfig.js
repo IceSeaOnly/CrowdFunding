@@ -15,6 +15,11 @@ const asideMenuConfig = [
     path: '/launch',
     icon: 'yonghu',
   },
+  {
+    name: '\u67E5\u770B\u4F17\u7B79\u8BB0\u5F55',
+    path: '/see',
+    icon: 'home',
+  },
 ];
 
 export { headerMenuConfig, asideMenuConfig };

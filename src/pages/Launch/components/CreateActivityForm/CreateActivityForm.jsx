@@ -174,6 +174,7 @@ export default class CreateActivityForm extends Component {
         
         <IceContainer title="发起众筹" style={styles.container}>
           <h2 style={{color:'red'}}>系统须知：</h2>
+          <span style={{color:'red'}}>· 请从测试网操作!</span><br/>
           <span style={{color:'red'}}>· 请务必安装chrome插件后操作</span><br/>
           <span>· 如未安装，请<a href="https://github.com/ChengOrangeJu/WebExtensionWallet" target="_blank">点击下载安装</a></span><br/>
           
